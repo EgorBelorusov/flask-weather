@@ -41,7 +41,8 @@ def get_weather(name_city: str):
         return f"В городе {name_city}: температура {temp} градусов, ветер {wind} м/сек"
 
     except requests.exceptions.RequestException as e:
-        return f"Ошибка запроса: {e}"
+        print(f"Ошибка запроса к Open-Meteo: {e}")
+        return "Сервис погоды сейчас недоступен. Попробуйте позже."
 
 
 
